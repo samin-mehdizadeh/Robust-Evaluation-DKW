@@ -7,7 +7,7 @@ Consider a network of clients with private, non-IID local datasets governed by a
 <p align="center">
   <img src="images/dkw_certify.png" alt="Alt Text" width="700">
 </p>
-Use empirical_cdf_dkw_plot.py script to compute the empirical cumulative distribution function (CDF) for a column of accuracy values from a CSV file.  
+Use cdf_confidence_bounds.py script to compute the empirical cumulative distribution function (CDF) for a column of accuracy values from a CSV file.  
 It also uses the Dvoretzky–Kiefer–Wolfowitz (DKW) inequality to create upper and lower bounds, giving a confidence band.
 
 
@@ -15,7 +15,7 @@ It also uses the Dvoretzky–Kiefer–Wolfowitz (DKW) inequality to create upper
 
 **Usage:**  
 ```bash
-python empirical_cdf_dkw_plot.py <csv_file> <target_cdf> [--delta <delta>]
+python cdf_confidence_bounds.py <csv_file> <target_cdf> [--delta <delta>]
 ```
 
 **Arguments:**
@@ -36,8 +36,8 @@ python empirical_cdf_dkw_plot.py <csv_file> <target_cdf> [--delta <delta>]
 ### Example Usage
 
 ```bash
-python empirical_cdf_dkw_plot.py data/example_data.csv 0.8
-python empirical_cdf_dkw_plot.py data/example_data.csv 0.8 --delta 0.01
+python cdf_confidence_bounds.py data/example_data.csv 0.8
+python cdf_confidence_bounds.py data/example_data.csv 0.8 --delta 0.01
 ```
 
 ### Outputs
